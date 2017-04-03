@@ -3,9 +3,9 @@ from matrix import *
 from math import *
 
 def add_polygon( points, x0, y0, z0, x1, y1, z1, x2, y2, z2 ):
-    add_edge( points, x0, y0, z0, x1, y1, z1 )
-    add_edge( points, x1, y1, z1, x2, y2, z2 )
-    add_edge( points, x2, y2, z2, x0, y0, z0 )
+    add_point( points, x0, y0, z0)
+    add_point( points, x1, y1, z1)
+    add_point( points, x2, y2, z2)
 
 def draw_polygons( points, screen, color ):
     if len(points) < 3:
