@@ -79,7 +79,8 @@ def add_sphere( edges, cx, cy, cz, r, step ):
             add_polygon(edges, points[index][0],
                         points[index][1],
                         points[index][2],
-                        points[index+1][0],
+                        points[in
+                               dex+1][0],
                         points[index+1][1],
                         points[index+1][2],
                         points[index+2][0],
