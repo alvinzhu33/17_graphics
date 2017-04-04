@@ -18,23 +18,14 @@ def draw_polygons( points, screen, color ):
                    int(points[point][1]),
                    int(points[point+1][0]),
                    int(points[point+1][1]), screen, color)
-                   '''int(points[point+2][0]),
-                   int(points[point+2][1]),
-                   screen, color)'''
-        draw_line( int(points[point][1]),
-                   int(points[point][2]),
+        draw_line( int(points[point+1][0]),
                    int(points[point+1][1]),
-                   int(points[point+1][2]), screen, color)
-                   '''int(points[point+2][1]),
-                   int(points[point+2][2]),
-                   screen, color)'''
-        draw_line( int(points[point][0]),
-                   int(points[point][2]),
-                   int(points[point+1][0]),
-                   int(points[point+1][2]), screen, color)
-                   '''int(points[point+2][0]),
-                   int(points[point+2][2]),
-                   screen, color)'''
+                   int(points[point+2][0]),
+                   int(points[point+2][1]), screen, color)
+        draw_line( int(points[point+2][0]),
+                   int(points[point+2][1]),
+                   int(points[point][0]),
+                   int(points[point][1]), screen, color)
         point+= 3
 
 def add_box( points, x, y, z, width, height, depth ):
