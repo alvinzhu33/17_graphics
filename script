@@ -1,7 +1,15 @@
-polygon
-0 0 0 100 100 0 250 0 0
-polygon
-100 100 0 400 100 0 250 0 0
-polygon
-500 0 0 400 100 0 250 0 0
+box
+100 100 100 100 100 100
+ident
+rotate
+x 30
+apply
+ident
+rotate
+y 30
+apply
+ident
+roate
+z 30
+apply
 display
