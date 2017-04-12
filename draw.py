@@ -14,21 +14,19 @@ def draw_polygons( points, screen, color ):
 
     point = 0
     while point < len(points) - 2:
-        if backcull(int(points[point][0]), int(points[point][1]), int(points[point][2]),
-                    int(points[point+1][0]), int(points[point+1][1]), int(points[point+1][2]),
-                    int(points[point+2][0]), int(points[point+2][1]), int(points[point+2][2])):
-            draw_line( int(points[point][0]),
-                       int(points[point][1]),
-                       int(points[point+1][0]),
-                       int(points[point+1][1]), screen, color);
-            draw_line( int(points[point+1][0]),
-                       int(points[point+1][1]),
-                       int(points[point+2][0]),
-                       int(points[point+2][1]), screen, color);
-            draw_line( int(points[point+2][0]),
-                       int(points[point+2][1]),
-                       int(points[point][0]),
-                       int(points[point][1]), screen, color);
+        x0 = int(points[point][0]);
+        y0 = int(points[point][1]);
+        z0 = int(points[point][2]);
+        x1 = int(points[point+1][0]);
+        y1 = int(points[point+1][1]);
+        z1 = int(points[point+1][2]);
+        x2 = int(points[point+2][0]);
+        y2 = int(points[point+2][1]);
+        z2 = int(points[point+2][2]);
+        if backcull(x0, y0, z0, x1, y1, z1, x2, y2, z2):
+            draw_line( x0, y0, x1, y1, screen, color);
+            draw_line( x1, y1, x2, y2, screen, color);
+            draw_line( x2, y2, x0, y0, screen, color);
         point+= 3
 
 def backcull(x0, y0, z0, x1, y1, z1, x2, y2, z2):
