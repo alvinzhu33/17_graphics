@@ -45,19 +45,19 @@ def add_box( points, x, y, z, width, height, depth ):
     add_edge(points, x1, y, z1, x1+2, y+2, z1+2)
     add_edge(points, x1, y1, z1, x1+2, y1+2, z1+2)'''
 
-    add_polygon(points, x+width, y, z, x+width, y+height, z, x, y+height, z);
-    add_polygon(points, x, y+height, z, x, y, z, x+width, y, z);
+    add_polygon(points, x+width, y, z, x+width, y-height, z, x, y-height, z);
+    add_polygon(points, x, y-height, z, x, y, z, x+width, y, z);
 
-    add_polygon(points, x, y, z, x, y+height, z, x, y+height, z-depth);
-    add_polygon(points, x, y+height, z-depth, x, y, z-depth, x, y, z);
+    add_polygon(points, x, y, z, x, y-height, z, x, y-height, z-depth);
+    add_polygon(points, x, y-height, z-depth, x, y, z-depth, x, y, z);
 
-    add_polygon(points, x, y, z-depth, x, y+height, z-depth, x+width, y+height, z-depth);
-    add_polygon(points, x+width, y+height, z-depth, x+width, y, z-depth, x, y, z-depth);
+    add_polygon(points, x, y, z-depth, x, y-height, z-depth, x+width, y-height, z-depth);
+    add_polygon(points, x+width, y-height, z-depth, x+width, y, z-depth, x, y, z-depth);
 
-    add_polygon(points, x+width, y, z-depth, x+width, y+height, z-depth, x+width, y+height, z);
-    add_polygon(points, x+width, y+height, z, x+width, y, z, x+width, y, z-depth);
-    add_polygon(points, x, y+height, z, x, y+height, z-depth, x+width, y+height, z-depth);
-    add_polygon(points, x+width, y+height, z-depth, x+width, y+height, z, x, y+height, z);
+    add_polygon(points, x+width, y, z-depth, x+width, y-height, z-depth, x+width, y-height, z);
+    add_polygon(points, x+width, y-height, z, x+width, y, z, x+width, y, z-depth);
+    add_polygon(points, x, y-height, z, x, y-height, z-depth, x+width, y-height, z-depth);
+    add_polygon(points, x+width, y-height, z-depth, x+width, y-height, z, x, y-height, z);
 
     add_polygon(points, x, y, z, x, y, z-depth, x+width, y, z-depth);
     add_polygon(points, x+width, y, z-depth, x+width, y, z, x, y, z);
